@@ -1,0 +1,75 @@
+@mixin sticks {
+    position:absolute;
+    top: 135px;
+    height: 5px;
+    transform-origin: 100%;   
+}
+.hour{
+    @include sticks;
+    left:52px;
+    background-color:black;
+    width: 85px;
+    &::after{
+        position: absolute;
+        content: " ";
+        width: 9px; 
+        height: 9px;
+        background-color: black;
+        left: -5px;
+        top: -2px;
+        transform :rotate(45deg);
+    }
+}
+.min{
+    @include sticks;
+    left:37px;
+    background-color:darkslategray;
+    width: 100px;
+    &::after{
+        position: absolute;
+        content: " ";
+        width: 7px; 
+        height: 7px;
+        background-color: darkslategray;
+        left: -5px;
+        top: -1px;
+        transform :rotate(45deg);
+    }
+}
+.sec{
+    @include sticks;
+    left:37px;
+    background-color:yellowgreen;
+    width: 100px;
+    height: 3px;
+    transition: all 0.2s;
+    transition-timing-function: cubic-bezier(0.1, 2.5, 0.5, 1);
+
+    &::after{
+        position: absolute;
+        content: " ";
+        width: 7px; 
+        height: 7px;
+        background-color: yellowgreen;
+        left: -5px;
+        top: -2px;
+        transform :rotate(45deg);
+    }
+}
+.dot{
+    position:absolute;
+    top:133px;
+    left:132px;
+    background-color:black;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+ }
+.clock{
+    margin:0px;
+    padding:0px;
+    width:250px;
+    height: 250px;
+    border: 10px solid goldenrod;
+    border-radius: 50%;
+  }

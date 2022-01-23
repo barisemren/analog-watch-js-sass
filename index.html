@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+</head>
+<body>
+  <div class="clock">
+    <div class="sticks hour"></div>
+    <div class="sticks min"></div>
+    <div class="sticks sec"></div>
+    <div class=" dot"></div>
+  </div>
+
+  <!--
+  <script>
+    var hourTimer = null;
+    const hourStick = document.querySelector('.hour');
+    function setHour(){
+        const now = new Date();
+        const hour = now.getHours();
+        const degree = ((hour-12)*30 + 90);
+        hourStick.style.transform = `rotate(${degree}deg)`;
+    }
+    hourTimer = setInterval(setHour,1000);
+
+    var minTimer = null;
+    const minStick = document.querySelector('.min');
+    function setMin(){
+        const now = new Date();
+        const min = now.getMinutes();
+        const degree = (min*6) + 90;
+        minStick.style.transform = `rotate(${degree}deg)`;
+    }
+    minTimer = setInterval(setMin,1000);
+
+    var secTimer = null;
+    const secStick = document.querySelector('.sec');
+    function setSec(){
+    	const now = new Date();
+    	const sec = now.getSeconds();
+    	const degree = ((sec/60)*360) + 90;
+      secStick.style.transform = `rotate(${degree}deg)`;
+    }
+    secTimer = setInterval(setSec,1000);
+  </script> 
+  -->
+</body>
+</html>
